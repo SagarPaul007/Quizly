@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: black;
+    --color-secondary: rgb(255, 202, 68);
+    --color-tertiary: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primary);
+    color: var(--color-tertiary);
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px 20px 0;
+    align-items: center;
+}
+
+nav .logo {
+    color: var(--color-tertiary);
+    font-size: 30px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+nav .play,
+nav .about {
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: var(--color-secondary);
+    color: black;
+    border: 1px solid transparent;
+    border-radius: 5%;
+}
+
+main {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .heading {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+main .sub {
+    margin: 20px 0 50px 0;
+    font-weight: 400;
+}
+
+.topics {
+    padding-right: 150px;
+}
+
+.topics ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.topics ul li {
+    list-style: none;
+    font-weight: 500;
+    margin: 10px 10px 10px 0;
+    padding: 5px 10px;
+    background-color: var(--color-secondary);
+    color: black;
+}
+
+.topics ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 300;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 0 50px;
+    }
+
+    .topics {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 0 20px;
+    }
+
+    main .heading {
+        font-size: 30px;
+    }
+
+    main .sub {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 0;
+    }
+
+    nav .play,
+    nav .about {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    main {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    .gif {
+        margin: 30px 0;
+    }
+
+    footer {
+        color: var(--color-secondary);
+        position: relative;
+        margin: 30px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+
+    nav .logo {
+        font-size: 30px;
+    }
+
+    nav .play,
+    nav .about,
+    .topics ul li {
+        font-size: 12px;
+    }
+
+    .gif img {
+        width: 80%;
+    }
+
+}
