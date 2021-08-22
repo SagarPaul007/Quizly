@@ -22,10 +22,18 @@ body {
     position: relative;
 }
 
+span {
+    color: aquamarine;
+}
+
+.hide {
+    display: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px 60px 20px 0;
+    padding: 20px 0;
     align-items: center;
 }
 
@@ -49,7 +57,7 @@ nav .about {
 }
 
 main {
-    margin-top: 60px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,25 +75,22 @@ main .sub {
 
 .topics {
     padding-right: 150px;
-}
-
-.topics ul {
     display: flex;
     flex-wrap: wrap;
 }
 
-.topics ul li {
+.topics .topic {
     list-style: none;
     font-weight: 500;
     margin: 10px 10px 10px 0;
     padding: 5px 10px;
     background-color: var(--color-secondary);
     color: black;
+    cursor: pointer
 }
 
-.topics ul li a {
-    text-decoration: none;
-    color: black;
+.topics .topic:hover {
+    background-color: aquamarine;
 }
 
 footer {
@@ -96,6 +101,46 @@ footer {
     left: 50%;
     transform: translate(-50%);
 }
+
+/* quiz */
+
+.quiz {
+    width: 50%;
+    border: 3px solid var(--color-secondary);
+    padding: 20px 30px;
+}
+
+.quiz .question {
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.quiz .options .option {
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    padding: 5px 10px;
+    margin: 10px 10px 10px 0;
+    font-weight: 500;
+    border: 1px solid none;
+    background-color: aquamarine;
+}
+
+.next {
+    text-decoration: none;
+    color: white;
+    display: none;
+    margin-top: 20px;
+    border: 2px solid aquamarine;
+    padding: 5px 10px;
+}
+
+.next h3 {
+    font-weight: 300;
+}
+
+
+/* responsive */
 
 @media screen and (max-width: 1200px) {
     body {
@@ -139,6 +184,10 @@ footer {
 
     .gif {
         margin: 30px 0;
+    }
+
+    .quiz {
+        width: 95%;
     }
 
     footer {
